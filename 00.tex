@@ -1,0 +1,242 @@
+% vim: set tw=80:spell
+%
+\documentclass[twoside,a4paper,11pt]{extarticle}
+%\documentclass[twoside,14pt,draft]{extarticle}
+%\documentclass[twoside,14pt,draft]{scrartcl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtext}
+\input{preamble.tex}
+%\usepackage{portland}
+%\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[labelsep=period,justification=centering]{caption}
+%\usepackage{ccaption}
+%\captiondelim{. }
+\usepackage{hyphenat}
+\usepackage{tweaklist}
+%\usepackage{trace}
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{positioning}
+\usepackage{subfig}
+\usepackage{rotating}
+\usepackage{svg}
+\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt plus 1pt minus 1pt}\setlength{\parsep}{0pt}}
+\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt plus 1pt minus 1pt}\setlength{\parsep}{0pt}}
+%\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{0pt}}
+%\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}}
+%\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{0pt}}
+%\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}}
+
+\clubpenalty=10000%
+\widowpenalty=10000%
+%\setlength{\parindent}{1.25cm}%
+
+\newcommand\familyname[1]{\textbf{#1}}
+
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\diag}{diag}
+
+\newcommand\eof{\writetotalpages\end{document}\endinput}
+
+\newcommand\key[1]{\textbf{#1}}
+\newcommand\vect[1]{\mathbf{#1}}
+\def\eqn #1 $#2${\begin{equation}\label{eq:#1}#2\end{equation}}
+%\def\where #1
+\newcommand\eqnref[1]{(\ref{eq:#1})}
+\makeatletter
+\def\p@subfigure{\thefigure,~}
+\def\thesubfigure{\asbuk{subfigure}}
+\newcounter{articleno}
+\setcounter{articleno}0
+\@newctr{figure}[articleno]
+\renewcommand \thefigure {\@arabic\c@articleno.\@arabic\c@figure}
+\@newctr{equation}[articleno]
+\renewcommand\theequation{\@arabic\c@articleno.\@arabic\c@equation}
+\newcommand\ps@twoside{%
+ \makeatletter%
+ \renewcommand\@oddfoot{~\hfill\thepage}%
+ \renewcommand\@evenfoot{\thepage\hfill~}%
+ \makeatother%
+}
+%\newcounter{totalpages}
+\def\writetotalpages{%
+  \protected@write\@auxout
+      {}%
+      {\string\setcounter{totalpages}{\thepage}}}
+\newcounter{totalfigures}%
+\newcounter{totalsubfigures}%
+\newcounter{totalsections}%
+\newcounter{totalsubsections}%
+\newcounter{totalsubsubsections}%
+\newcounter{totalparagraphs}%
+
+%\def\addcontentsline#1#2#3{%
+%  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}%
+%  \protect\stepcounter{total#2s}}}
+\makeatother
+\newcommand\comment[1]{\textsf{#1}}
+\renewcommand\labelitemi{\textendash}
+\renewcommand\labelitemii{\textendash}
+
+
+% перенос формул в тексте
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+  {\hbox{$\mathsurround=0pt #1$}}{}}
+
+\def\layersep{2.5cm}
+
+\begin{document}
+\switchlang{ru}
+\addtocounter{page}{2}%
+\pagestyle{twoside}
+
+\makeatletter
+\def\@starttoc#1{%
+  \begingroup
+    \raggedright
+    \sloppy
+    \makeatletter
+    \@input{\jobname.#1}%
+    \if@filesw
+      \expandafter\newwrite\csname tf@#1\endcsname
+      \immediate\openout \csname tf@#1\endcsname \jobname.#1\relax
+    \fi
+    \@nobreakfalse
+    \fussy
+  \endgroup}
+\makeatother
+
+
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+
+\def\documentclass[#1]#2{}
+
+\makeatletter
+
+\def\@self@name{00}
+\def\@preamble@name{preamble.tex}
+
+\def\document{\newpage}
+\let\@lvee@enddoc\enddocument
+
+\let\@lvee@input\input
+\def\enddocument{%
+\gdef\@title{}%
+\gdef\@author{}%
+}
+
+\def\@lbibitem[#1]#2{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt plus 1pt minus 1pt}\setlength{\parsep}{0pt}%
+    \item[\@biblabel{#1}\hfill]\if@filesw
+      {\let\protect\noexpand
+       \immediate
+       \write\@auxout{\string\bibcite{#2}{#1}}}\fi\ignorespaces}
+\def\@bibitem#1{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt plus 1pt minus 1pt}\setlength{\parsep}{0pt}%
+    \item\if@filesw \immediate\write\@auxout
+       {\string\bibcite{#1}{\the\value{\@listctr}}}\fi\ignorespaces}
+
+\renewcommand\maketitle{\par
+  \begingroup
+     \def\@thanks{}% flush all the thanks we have already collected so they don't accumulate
+     \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+     \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+     \long\def\@makefntext##1{\parindent 1em\noindent
+             \hb@xt@1.8em{%
+                 \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+%     \if@twocolumn
+%       \ifnum \col@number=\@ne
+%         \@maketitle
+%       \else
+%         \twocolumn[\@maketitle]%
+%       \fi
+%     \else
+      \newpage
+      \global\@topnum\z@   % Prevents figures from going at top of page.
+      \stepcounter{articleno}%
+      \def\footnote##1{}
+      \addcontentsline{toc}{section}{\nohyphens{\@title}}%
+      \@maketitle
+%     \fi
+    \thispagestyle{twoside}\@thanks
+  \endgroup
+  \setcounter{footnote}{0}%
+}
+
+\def\@maketitle{%
+  \newpage
+  \null
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title }\\%
+    \ifx \@author \@empty
+    \else
+    {\large
+      \lineskip .2em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}}%
+    \fi
+  \end{center}%
+  \par
+}
+
+\def\input#1{
+\let\@@@@curfile\@@@curfile
+\def\@@@curfile{#1}
+\message{@@\@@@curfile @@}
+\ifx \@@@curfile \@preamble@name
+    \message{An attempt to include the preamble has occured, ignoring.^^J}
+\else
+    \ifx \@@@curfile \@self@name
+        \message{An attempt to include ourselves had occured, ignoring.^^J}
+    \else
+        \@lvee@input#1
+    \fi
+\fi
+\let\@@@curfile\@@@@curfile
+\message{ONEXIT @@\@@@curfile @@}
+}
+
+\def\abstract{%
+        \small%
+        \quotation \noindent}
+
+\def\nocite#1{}
+\def\bibliography#1{
+    \makeatletter%
+    \@lvee@input{\@@@curfile.bbl}
+    \makeatother%
+}
+
+\makeatother
+
+\input{theory_mech}
+\input{theory_track}
+\input{1990_kraft_toptrack}
+\input{1992_ibm_convertible}
+\input{1995_logitech_trackman}
+\input{1996_kensington_expert_trackball_5}
+\input{1997_fellowes_trackball}
+\input{1998_apple_puck}
+\newpage
+
+\makeatletter
+\let\enddocument\@lvee@enddoc
+\let\input\@lvee@input
+\makeatother
+
+\eof
+
