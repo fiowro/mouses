@@ -167,7 +167,11 @@
       \global\@topnum\z@   % Prevents figures from going at top of page.
       \stepcounter{articleno}%
       \def\footnote##1{}
-      \addcontentsline{toc}{section}{\nohyphens{\@title}}%
+      \ifx \@author \@empty
+          \addcontentsline{toc}{section}{\nohyphens{\@title}}%
+      \else
+          \addcontentsline{toc}{section}{\nohyphens{\@title. \@author}}%
+      \fi
       \@maketitle
 %     \fi
     \thispagestyle{twoside}\@thanks
