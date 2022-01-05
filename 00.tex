@@ -156,14 +156,14 @@
      \long\def\@makefntext##1{\parindent 1em\noindent
              \hb@xt@1.8em{%
                  \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-%     \if@twocolumn
-%       \ifnum \col@number=\@ne
-%         \@maketitle
-%       \else
-%         \twocolumn[\@maketitle]%
-%       \fi
-%     \else
-      \newpage
+     \if@twocolumn
+       \ifnum \col@number=\@ne
+         \@maketitle
+       \else
+         \twocolumn[\@maketitle]%
+       \fi
+     \else
+      \clearpage
       \global\@topnum\z@   % Prevents figures from going at top of page.
       \stepcounter{articleno}%
       \def\footnote##1{}
@@ -173,7 +173,7 @@
           \addcontentsline{toc}{section}{\nohyphens{\@title. \@author}}%
       \fi
       \@maketitle
-%     \fi
+     \fi
     \thispagestyle{twoside}\@thanks
   \endgroup
   \setcounter{footnote}{0}%
