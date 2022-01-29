@@ -1,6 +1,6 @@
 all: 00.pdf
 
--include $(shell mkdir .dep 2>/dev/null) $(wildcard .dep/*.d)
+-include $(shell mkdir -p .dep/source 2>/dev/null) $(wildcard .dep/*.d)
 
 ifeq ($(wildcard .progress),.progress)
 .DEFAULT_GOAL := progress
@@ -15,16 +15,16 @@ clean:
 .progress:
 	@[ -x .progress ] || ( echo '#!/usr/bin/awk -f$$$$BEGIN {$$a[0] = "/"$$a[1] = "-"$$a[2] = "\\"$$a[3] = "|"$$pass = 0$$}$$$${$$if (!pass) printf "" a[(FNR - 1) % 4]$$else print$$}$$$$/pdflatex/ {$$if (!pass) printf "o "$$}$$$$/ONEXIT/ {$$if (!pass) printf ". "$$}$$$$/^!/ {$$pass = 1$$print ""$$print$$}$$$$END {$$if (!pass) print "Done."$$}$$$$' | tr $$ \\n > .progress ; chmod +x .progress )
 
-.dep/%.tex.d: %.tex
-	@echo $(<:.tex=.pdf): $< $$(sed -n '/^\\input/s/.*{\([^.]*\).*}.*/\1.tex/p' $<) > $@
-	@echo $@: $< >> $@
+.dep/%.tex.d: source/%.tex
+	echo $(<:.tex=.pdf): $< $$(sed -n '/^\\input/s/.*{\([^.]*\).*}.*/\1.tex/p' $<) > $@
+	echo $@: $< >> $@
 
-%.pdf: %.tex
+%.pdf: source/%.tex
 	@echo $(<:.tex=.pdf): $< $$(sed -n '/^\\input/s/.*{\([^.]*\).*}.*/\1.tex/p' $<) > .dep/$<.d
-	pdflatex $<
+	cd source; pdflatex -output-directory=.. $< 
 ifneq ($(QUICK),yes)
-	pdflatex $<
-	pdflatex $<
+	cd source; pdflatex -output-directory=.. $<
+	cd source; pdflatex -output-directory=.. $<
 endif
 
 .PHONY: all progress clean
