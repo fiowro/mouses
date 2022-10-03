@@ -1,0 +1,70 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+
+\begin{document}
+
+\title{1986 "--- Honeywell microLYNX trackball}
+\date{}
+\maketitle
+
+The microLYNX trackball (or “$\mu LYNX$” if Greek characters are allowed) shown in figure \ref{fig:microLYNXPic} was manufactured in California by Honeywell, a subsidiary of Disc Instruments. Having appeared in 1986 or a year earlier (some of the advertising materials are dated 1985), the trackball proved to be a long-liver and subsequently withstood many incarnations as the model “LX200”, which differed in connection interfaces, electronics and were often rebranded under different company names \cite{lx200}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.45]{1986_honeywell_microlynx_trackball/pic_30.jpg}
+    \caption{Honeywell microLYNX trackball}
+    \label{fig:microLYNXPic}
+\end{figure}
+
+As you can see, the device is made in a minimalist design, equipped with a large black ball recessed in a beige body with an extended wrist rest \ref{fig:microLYNXTopBottom}. The ball fits snugly to the edges of the hole in the device case, which protects well from debris getting inside the trackball, but makes it impossible to remove the ball for cleaning without disassembling the case. In front of the ball are three buttons with keycaps identical to the keys of the classic full-size keyboard of that time.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1986_honeywell_microlynx_trackball/top_30.jpg}
+    \includegraphics[scale=0.4]{1986_honeywell_microlynx_trackball/bottom_30.jpg}
+    \caption{microLYNX, top and bottom views}
+    \label{fig:microLYNXTopBottom}
+\end{figure}
+
+Apparently, there were two early versions of the “LX200”: the comLYNX model had a serial \cite{comlynx} interface, the quadLYNX version was the most electronically simple quadrature device connected to the bus interface, while the most unusual of the three options, microLYNX, used the keyboard port as a connection interface, actually being included in the break of the keyboard cable. Later, variants with PS/2 interface also appeared.
+
+By default, microLYNX operates in “text mode”, and turning the ball has the same effect as pressing the cursor keys on the keyboard: in fact, when the ball moves, the trackball generates and sends scan codes of the cursor keys to the computer. Trackball buttons are programmable: the user can configure the button to issue from 1 to 30 key codes in the form of macros. You can also adjust the cursor movement speed (how often the cursor key codes are generated).
+
+The microLYNX driver can emulate a Microsoft mouse for graphics programs under DOS, and the user can use the trackball to move the cursor and do dragging to select text or move graphics (the two external buttons in front of the ball can be used to drag).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1986_honeywell_microlynx_trackball/size.jpg}
+    \caption{microLYNX on a graduated pad with a grid step of 1~cm}
+    \label{fig:microLYNXSize}
+\end{figure}
+
+However, given the size of the device (figure \ref{fig:microLYNXSize}), holding down the button while the ball is moving is a tricky maneuver at best. Honeywell solved this problem with the comLYNX trackball, which can use the middle button as a \cite{comlynx} drag latch. First, the middle button is pressed, then the left or right button, and this programmatically fixes the selected button in the pressed position. Repeated pressing of any of the three buttons disables this mode. However, microLYNX does not support this feature.
+
+The trackball comes with two sets of software: a DOS driver that emulates a Microsoft mouse, and a separate DOS resident program that shows a pop-up menu and also allows you to program keyboard macros for the trackball buttons and cursor movement.
+
+In addition, configuration can be performed without using a driver, in “alternative mode”, which is activated by pressing the “Ctrl + Alt + Shift” combination on the computer keyboard (due to the nature of the connection, microLYNX “listens” to everything that the keyboard sends to the computer). When entering this mode, the trackball prints text prompts to standard output (as if the user had just typed them) and asks the user to type special commands on the keyboard that change its settings.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1986_honeywell_microlynx_trackball/hand_60.jpg}
+    \caption{microLYNX with a human hand model}
+    \label{fig:microLYNXHand}
+\end{figure}
+
+In terms of ergonomics, the size of the trackball, the wrist rest, and the rounded edges and corners create a fairly comfortable working environment (figure \ref{fig:microLYNXHand}). However, the buttons are located far from the ball and significantly lower in height, which deprives the user of both the ability to press them with one hand without moving the hand, and with two hands, since the buttons are covered by the palm of the hand when the user rotates the ball. Therefore, microLYNX is difficult to use in a graphical interface that requires intensive work with both frequent cursor movements and button presses. However, the trackball can be quite effective in various industrial applications.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.52]{1986_honeywell_microlynx_trackball/inside_60.jpg}
+    \caption{microLYNX disassembled}
+    \label{fig:microLYNXInside}
+\end{figure}
+
+Trackball internals are shown on figure \ref{fig:microLYNXInside}. This is an optomechanical device. Rollers are made using bearings and stainless steel shafts, which ensures maximum reliability and durability of the device. The high reliability of trackball and ergonomics, which is well suitable for a number of technical tasks, made this model “long-term survivor”: the device has been produced for at least ten years for industrial applications under various brands, and at the same time a constant appearance and mechanical part of the structure were preserved.
+
+\begin{thebibliography}{9}
+\bibitem {comlynx} Trackballs: Stationary mice // PC Magazine. August 1987, page 199-202 \url{https://trackballs.eu/media/Fulcrum/PC%20Mag%20Aug-1987%20p199-202.pdf}
+\bibitem {lx200} Disc Instruments LX200 \url{https://web.archive.org/web/20220501213039/https://forum.trackballs.eu/viewtopic.php?f=17&t=16}
+\end{thebibliography}
+\end{document}
