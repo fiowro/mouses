@@ -7,7 +7,7 @@
 \usepackage{hyperref}
 \usepackage{rotating}
 \usepackage[inner=2cm,top=1.8cm,outer=2cm,bottom=2.3cm,nohead]{geometry}
-\usepackage{listings}
+%\usepackage{listings}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{longtable}
@@ -16,7 +16,7 @@
 \usepackage{tikzsymbols}
 \usepackage{soul}
 \usepackage[ruled,vlined]{algorithm2e}
-%\counterwithout{figure}{section} 
+\counterwithout{figure}{section} 
 
 \usepackage{url}
 \makeatletter
@@ -38,16 +38,16 @@
 \def\refname{Літаратура}%
 \def\figurename{Іл.}%
 }
-\def\switchlangen{
-\let\saverefname=\refname%
-\def\refname{References}%
-\def\figurename{Fig.}%
-}
 \def\switchlangru{
 \let\saverefname=\refname%
 \let\savefigurename=\figurename%
 \def\refname{Литература}%
 \def\figurename{Рис.}%
+}
+\def\switchlangen{
+\let\saverefname=\refname%
+\def\refname{References}%
+\def\figurename{Fig.}%
 }
 
 \hyphenation{admi-ni-stra-tive}
