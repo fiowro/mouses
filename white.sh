@@ -6,5 +6,5 @@ for filename in ./*.jpg; do
   newfilename=$y
   y=$((y+1))
   echo $newfilename
-   ../../../../autowhite -m 1 -p 30 $filename result/$filename
+   ../../../autowhite -m 1 -p 30 $filename result/$filename
 done
