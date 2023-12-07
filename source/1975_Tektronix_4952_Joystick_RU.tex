@@ -1,0 +1,67 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{ru}
+\begin{document}
+
+\title{1984 "--- Tektronix 4952 Joystick}
+\date{}
+\maketitle
+\selectlanguage{russian}
+Джойстик Tektronix 4952 (рис. \ref{fig:TektronixJoystickPic}) был разработана для компьютеров RadioShack TRS-80 Color Computer (позднее переименованным в Tandy Color Computer). Color Computer model 1, выпущенный в 1981 году, представлял собой домашний компьютер, оснащенный резиновой клавиатурой как у микрокалькуляторов, имевший ОЗУ от 4Кб до 32Кб, 8-битную разрядность машинного слова и использовал телевизор в качестве дисплея \cite{wiki}. С течением времени список периферийных устройств расширялся, и в 1984 году в их список добавилась джойстик\cite{adv}, подключавшаяся в порт аналогового джойстика. Джойстик производилась по контракту японской компанией Alps.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{1975_Tektronix_4952_Joystick/pic_30.jpg}
+    \caption{Tandy Color Mouse}
+    \label{fig:TektronixJoystickPic}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.55]{1975_Tektronix_4952_Joystick/top_60.jpg}
+    \includegraphics[scale=0.55]{1975_Tektronix_4952_Joystick/bottom_60.jpg}
+    \caption{Tandy Color Mouse, вид сверху и снизу}
+    \label{fig:TektronixJoystickTopAndBottom}
+\end{figure}
+
+Tektronix 4952 Joystick имеет единственную кнопку (рис. \ref{fig:TektronixJoystickTopAndBottom}), похожую по форме и расположению на кнопку выпущенной годом ранее Apple Lisa mouse, а корпус очень близко воспроизводит форму другой мыши 1983 года "--- Sharp MZ-1X10, также производившейся компанией Alps. Черно-красная цветовая схема Color Mouse повторяет цвет базовой модели джойстика для Tandy Color Computer \cite{hierophant}.
+
+Нижняя сторона корпуса демонстрирует точно такой же как у MZ-1X10 стальной шар. Однако в остальном конструкция Color Mouse по сравнению с ней сильно удешевлена: отсутствуют как три металлических шарика, облегчающие скольжение мыши, так и съёмное кольцо, позволяющее извлечь шар для чистки. Усовершенствованием является разве что пластиковый ограничитель, защищающий провод от повреждения в месте его выхода из корпуса мыши.
+
+Джойстик имеет небольшие размеры, типичные для 80-х годов (рис. \ref{fig:TektronixJoystickSize}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.49]{1975_Tektronix_4952_Joystick/size_30.jpg}
+    \caption{Tandy Color Mouse на размерном коврике с шагом сетки 1~см}
+    \label{fig:TektronixJoystickSize}
+\end{figure}
+
+Color Mouse имеет достаточно простой дизайн; форма ассоциируется с блоком питания домашних плееров и некоторых других бытовых устройств. Очевидно, скошенная задняя грань должна обеспечить более комфортное расположение ладони, однако с учетом размеров мыши существенных улучшений в эргономику это не привносит (рис. \ref{fig:TektronixJoystickHand}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.55]{1975_Tektronix_4952_Joystick/hand_30.jpg}
+    \caption{Tandy Color Mouse с моделью руки человека}
+    \label{fig:TektronixJoystickHand}
+\end{figure}
+
+Как упоминалось, джойстик подключается к порту аналогового джойстика. Как и в случае джойстика, информация о каждой из двух координат закодирована в аналоговом виде, величиной электрического напряжения на соответствующем контакте разъема. Руководство по эксплуатации сообщает, что джойстик имеет разрешение в 64 <<шага>> по каждой из координатных осей \cite{manual}. Такое низкое разрешение объясняется ограниченными возможностями аналогово-цифрового преобразователя Tandy Color Computer: драйвера, позволяющие использовать аналоговый джойстик для перемещения курсора мыши, также демонстрируют малую точность позиционирования \cite{hierophant}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{1975_Tektronix_4952_Joystick/inside_30.jpg}
+    \caption{Tandy Color Mouse в разобранном виде}
+    \label{fig:TektronixJoystickInside}
+\end{figure}
+
+В разобранном виде манипулятор показан на рис. \ref{fig:TektronixJoystickInside}. Tandy Color Mouse не использует контактные или оптомеханические энкодеры: вместо этого шар передает движение паре потенциометров точно так же, как это делает рукоятка аналогового джойстика. Безусловно, такое решение имеет существенные недостатки: джойстик не имеет возможностей калибровки, также в отличие от джойстика не существует способа определить по виду мыши, что ее потенциометры переведены в среднее положение, которому должно соответствовать расположение мыши в центре коврика, или что они достигли крайнего положения. Однако, поскольку Tandy Color Mouse представляет собой манипулятор с абсолютными координатами, пользователь может оценить положение курсора на экране и поместить джойстик на часть коврика, приблизительно соответствующую этому положению.
+
+\begin{thebibliography}{9}
+\bibitem {wiki} Tektronix 4050 -- Wikipedia \url{https://en.wikipedia.org/wiki/Tektronix_4050}
+\bibitem {adv} Canadian Information Processing Society (CIPS) Computer Magazine - Vol. 5, Iss. 1-11, 1974. - p. 29
+\bibitem {manual} TEKTRONIX 4952 JOYSTICK. Tektronix, Inc., JAN 1975. \url{http://www.bitsavers.org/pdf/tektronix/401x/070-1826-01_4952_Joystick_Jan75.pdf}
+\bibitem {price} Stanley J. Tektronix 4952 - Electronixandmore Vintage Electronics and Beyond. -- \url{https://electronixandmore.com/misc/index.php?item=56}
+
+\end{thebibliography}
+\end{document}

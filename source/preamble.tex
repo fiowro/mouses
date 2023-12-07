@@ -16,6 +16,7 @@
 \usepackage{tikzsymbols}
 \usepackage{soul}
 \usepackage[ruled,vlined]{algorithm2e}
+\usepackage{qrcode}
 \counterwithout{figure}{section} 
 
 \usepackage{url}
@@ -115,3 +116,5 @@
 \vskip 1em
 \noindent \textit{#1}
 }
+
+\AtEndDocument{\vfill\centering \qrcode{https://github.com/fiowro/mouses/blob/main/\jobname.pdf}}
