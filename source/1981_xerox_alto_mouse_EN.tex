@@ -8,7 +8,9 @@
 \maketitle
 \selectlanguage{english}
 
-In March 1973, Xerox Corporation announced the Xerox Alto computer, considered the first workstation (and the first personal computer), as well as the first computer equipped with a graphical user interface \cite{wiki}. The workstation also came with the first mass-produced mouse in the history of computers, the Xerox Alto Mouse (Fig. \ref{fig:XeroxAltoPic}). According to the quotes given in \cite{mouses}, those mice weren't too reliable, picking up dirt, getting gummed up and not controlling the cursor anymore. Alto user had to unplug the mouse when that happened, put it into the ``Dead Mice''  box, and grab a cleaned one from the 'Clean Mice' box.
+In March 1973, Xerox Corporation announced the Xerox Alto computer, considered the first workstation (or personal computer), as well as the first computer with a graphical user interface \cite{wiki}. The workstation also came with the first mass-produced mouse in the history of computers, the Xerox Alto Mouse (fig. \ref{fig:XeroxAltoPic}). The original mouse based on two wheels was in several years upgraded and started to use a ball. But still, those mice weren't too reliable according to the quotes given in \cite{mouses}: they picked up dirt, quickly became gummed, and no longer controlled the cursor. Alto user had to unplug the mouse when that happened, put it into the ``Dead Mice''  box, and grab a cleaned mouse from the ``Clean Mice'' box. And the price of such a mouse was more than \$400.
+
+The work for a completely optical mouse has been started near 1980 to solve two problems: to get higher reliability (because of no moving parts except the button switches), and much cheaper price (due to the one-chip design). The result of this effort was the last generation of the Alto mice -- Xerox Alto optical mouse, brought into life in 1981 \cite{vlsi81}. The mouse proved to be very successful compared to its mechanical predecessor, so its design was soon adopted for Xerox Star computers and later even for some of the company's copiers \cite{mouses}.
 
 \begin{figure}[h]
     \centering
@@ -17,54 +19,51 @@ In March 1973, Xerox Corporation announced the Xerox Alto computer, considered t
     \label{fig:XeroxAltoPic}
 \end{figure}
 
-The mousepad was paper, sold in packs of 25 sheets \cite{pad}. The pattern was a
-hexagonal array of light dots in a dark field, and was absolutely usable being duplicated by a copier. The reconstructed pad can be seen on fig. \ref{fig:XeroxAltoPad}.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{1981_xerox_alto_mouse/pad_30.jpg}
-    \caption{Xerox Alto Optical Mouse on a reconstructed pad}
-    \label{fig:XeroxAltoPad}
-\end{figure}
-
-The name of the mouse “Alto Mouse” is highlighted on the upper side of the case with two triangular stylized mice in outlines and solid lines. The bottom side shows that this is an optical mouse (figure \ref{NecAltoTopAndBottom}), which largely repeats the external design solutions of the Mouse Systems mice of the same period and is intended for use with a special mirror pad \cite{photo}.
+The Xerox Alto optical mouse is housed in the same case as its mechanical version \cite{vlsi82}, and has the same color scheme. The case, made of (originally) cream-colored plastic, glossy in this mouse revision, is an almost perfect parallelepiped: it widens slightly toward the bottom and has convex sides to reduce the association with a ``box''. On the upper side of the case are three large, oblong, rounded buttons that meet at the edges, visually forming one solid block (Fig. \ref{XeroxAltoTopAndBottom}). Xerox software documentation called these buttons ``red'', ``yellow'', and ``blue''. However, in all cases (except for the earliest mouse modification with wheels and transversely oriented buttons \cite{vlsi81}), all three buttons were made of black (later, dark gray) plastic. It is likely that the myth that using one- and two-button mice was easier compared to a three-button one comes out of the confusion this unfortunate color coding caused among users.
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.5]{1981_xerox_alto_mouse/top_30.jpg}
     \includegraphics[scale=0.5]{1981_xerox_alto_mouse/bottom_30.jpg}
     \caption{Xerox Alto Optical Mouse, top and bottom views}
-    \label{NecAltoTopAndBottom}
+    \label{XeroxAltoTopAndBottom}
 \end{figure}
 
-In terms of size, the manipulator is an optical cursor control device typical for the 80s (figure \ref{fig:NecAltoSize}).
+A $4 \times 4$ size scanning elements matrix is responsible for reading color inhomogeneities at move, so the mouse required either a pad with a specially designed pattern or any surface with similar alternating light and dark spots, such as denim. The Xerox Alto optical mouse pad was a paper, sold in packs of 25 sheets \cite{pad}. The pattern was an array of light hexagons on a dark field and was easily reproduced by photocopying. A reconstructed pad can be seen in fig. \ref{fig:XeroxAltoPad}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{1981_xerox_alto_mouse/pad_30.jpg}
+    \caption{Xerox Alto Optical Mouse on a reconstructed pad}
+    \label{fig:XeroxAltoPad}
+\end{figure}
+
+The mouse could have been smaller and lower in size if it had not used the standard Alto mouse body. As it is, it has the typical dimensions for mechanical mice of the first half of the 80s (figure \ref{fig:XeroxAltoSize}).
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{1981_xerox_alto_mouse/size_15.jpg}
     \caption{Xerox Alto Optical Mouse on a graduated pad with a grid step of 1~cm}
-    \label{fig:NecAltoSize}
+    \label{fig:XeroxAltoSize}
 \end{figure}
 
-In terms of ergonomics, the exterior of the Alto Mouse has a strong industrial design. At the same time, a large number of corners and flat edges are partly compensated by rounded joints of the edges in the part of the body closest to the user and convex long buttons conveniently located within the reach of the fingers (figure \ref{fig:NecAltoHand}).
+In terms of ergonomics and appearance, the Alto Mouse is minimalist. The user experience certainly suffers from the severe ``rectangularity'' of the case. Although this is partly compensated for by the convex oblong buttons, located within the reach of the fingers, the case doesn't provide much palm support (figure \ref{fig:XeroxAltoHand}).
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{1981_xerox_alto_mouse/hand_30.jpg}
     \caption{Xerox Alto Optical Mouse with a human hand model}
-    \label{fig:NecAltoHand}
+    \label{fig:XeroxAltoHand}
 \end{figure}
 
-Xerox Alto Mouse has a DIN connector and belongs to the Bus Mouse category according to the connection interface. A feature of such mice is that the optocoupler signals are processed not by a chip in the mouse case, but by a special adapter in the computer system unit; therefore, this mouse is powered by the computer without a separate power supply, unlike many early optical models that were connected to the serial port of the IBM PC.
+The mouse has connector typical for Xerox Alto (DA-15 in this version), and the same quadrature interface as other Xerox mice. Mouse internals are shown in figure \ref{fig:XeroxAltoInside}, where you can see the plastic cover which protects the scanning matrix from possible exposure to light (in later versions of mice for the Xerox Star, this cover was removed), as well as the signal processing chip. The printed circuit board is raised above the base, and angle-directed LEDs placed under are illuminating the mouse pad.
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.8]{1981_xerox_alto_mouse/inside_60.jpg}
     \caption{Xerox Alto Optical Mouse disassembled}
-    \label{fig:NecAltoInside}
+    \label{fig:XeroxAltoInside}
 \end{figure}
-
-Mouse internals are shown on figure \ref{fig:NecAltoInside}. You can see the specially produced chip \cite{vlsi82} and other parts incorporated into the standard Xerox Alto mouse housing \cite{vlsi82}..
 
 \begin{thebibliography}{9}
 \bibitem {wiki} Xerox Alto: Wikipedia \url{https://en.wikipedia.org/wiki/Xerox_Alto}
