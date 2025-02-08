@@ -19,7 +19,9 @@ jobs:
             !source/*/*/*
             Makefile
       - name: List files in the repository
-        run: tree ${{ github.workspace }}
+        run: |
+          tree ${{ github.workspace }}
+          ls source/*.tex        
       - name: Check updated files      
         id: changed-tex-files
         uses: tj-actions/changed-files@v45
