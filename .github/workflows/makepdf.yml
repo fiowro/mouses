@@ -21,7 +21,7 @@ jobs:
       - name: List files in the repository
         run: |
           tree ${{ github.workspace }}
-          ls source/*.tex        
+          ls ${{ github.workspace }}/source/*.tex        
       - name: Check updated files      
         id: changed-tex-files
         uses: tj-actions/changed-files@v45
@@ -33,6 +33,7 @@ jobs:
         env:
           CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
         run: |
+          cd ${{ github.workspace }}
           for file in ${CHANGED_TEX_FILES}; do
             echo "Building $file"   
             make $(basename -s .tex $file).pdf
