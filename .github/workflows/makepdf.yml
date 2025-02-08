@@ -17,12 +17,7 @@ jobs:
           sparse-checkout: |            
             source/*
             !source/*/*/*
-            Makefile
-      - name: List files in the repository
-        run: |
-          # tree ${{ github.workspace }}
-          pwd
-          ls ${{ github.workspace }}/source/
+            Makefile      
       - name: Check updated files      
         id: changed-tex-files
         uses: tj-actions/changed-files@v45
@@ -34,6 +29,8 @@ jobs:
         env:
           CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
         run: |
+          sudo apt-get update -y
+          sudo apt-get install texlive-full -y
           cd ${{ github.workspace }}
           for file in ${CHANGED_TEX_FILES}; do
             echo "Building $file"   
