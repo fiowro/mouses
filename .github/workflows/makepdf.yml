@@ -27,7 +27,7 @@ jobs:
           files: |
             source/*.tex
       - name: Make PDFs from changed files
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.changed-tex-files.outputs.any_changed == 'true'
         env:
           CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
         run: |
