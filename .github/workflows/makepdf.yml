@@ -22,7 +22,7 @@ jobs:
         run: |
           # tree ${{ github.workspace }}
           pwd
-          ls ${{ github.workspace }}/source/*.tex        
+          ls ${{ github.workspace }}/source/
       - name: Check updated files      
         id: changed-tex-files
         uses: tj-actions/changed-files@v45
