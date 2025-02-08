@@ -20,7 +20,8 @@ jobs:
             Makefile
       - name: List files in the repository
         run: |
-          tree ${{ github.workspace }}
+          # tree ${{ github.workspace }}
+          pwd
           ls ${{ github.workspace }}/source/*.tex        
       - name: Check updated files      
         id: changed-tex-files
