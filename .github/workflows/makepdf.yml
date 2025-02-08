@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ main ]    
     paths: 
-    - 'sources/*.tex'
+    - 'source/*.tex'
 jobs:
   build:
     runs-on: ubuntu-latest
