@@ -1,0 +1,37 @@
+name: make PDF
+run-name: ${{ github.actor }} builds updated PDF
+on:
+  pull_request:
+    branches: [ master ]    
+    paths: 
+    - 'sources/*.tex'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build triggered by a ${{ github.event_name }} event."      
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |            
+            source/*/
+            !source/*/*/*
+            Makefile
+      - name: List files in the repository
+        run: tree ${{ github.workspace }}
+      - name: Check updated files      
+        id: changed-tex-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+            source/*.tex
+      - name: Make PDFs from changed files
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
+        run: |
+          for file in ${CHANGED_TEX_FILES}; do
+            echo "Building $file"   
+            make $(basename -s .tex $file).pdf
+          done
