@@ -2,7 +2,7 @@ name: make PDF
 run-name: ${{ github.actor }} builds updated PDF
 on:
   pull_request:
-    branches: [ master ]    
+    branches: [ main ]    
     paths: 
     - 'sources/*.tex'
 jobs:
