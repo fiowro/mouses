@@ -15,7 +15,7 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |            
-            source/*/
+            source/*
             !source/*/*/*
             Makefile
       - name: List files in the repository
