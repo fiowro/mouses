@@ -30,15 +30,20 @@ jobs:
           CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
         run: |
           echo $CHANGED_TEX_FILES
-      - name: Build PDFs
-        uses: xu-cheng/texlive-action@v2
-        with:
-          texlive_version: 2022
-          run: |
-            for file in ${CHANGED_TEX_FILES}; do
+          echo "#!/bin/bash" > entrypoint.sh
+          ENTRYPOINT = "make "
+          for file in ${CHANGED_TEX_FILES}; do
               echo "Building $file"   
-              make $(basename -s .tex $file).pdf
-            done
+              ENTRYPOINT+= " $(basename -s .tex $file).pdf"
+          done
+          echo $ENTRYPOINT
+          echo $ENTRYPOINT >> entrypoint.sh
+          chmod a+x entrypoint.sh
+          cat entrypoint.sh
+      - name: Build PDFs
+        uses: dante-ev/latex-action@latest
+        with:
+          entrypoint: ./entrypoint.sh            
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
