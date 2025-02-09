@@ -34,7 +34,7 @@ jobs:
           ENTRYPOINT = "make "
           for file in ${CHANGED_TEX_FILES}; do
               echo "Building $file"   
-              ENTRYPOINT+= " $(basename -s .tex $file).pdf"
+              ENTRYPOINT+=" $(basename -s .tex $file).pdf"
           done
           echo $ENTRYPOINT
           echo $ENTRYPOINT >> entrypoint.sh
