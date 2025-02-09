@@ -24,18 +24,21 @@ jobs:
         with:
           files: |
             source/*.tex
-      - name: Make PDFs from changed files
+      - name: Make list of PDFs from changed files
         if: steps.changed-tex-files.outputs.any_changed == 'true'
         env:
           CHANGED_TEX_FILES: ${{ steps.changed-tex-files.outputs.all_changed_files }}
         run: |
-          sudo apt-get update -y
-          sudo apt-get install texlive-full -y
-          cd ${{ github.workspace }}
-          for file in ${CHANGED_TEX_FILES}; do
-            echo "Building $file"   
-            make $(basename -s .tex $file).pdf
-          done
+          echo $CHANGED_TEX_FILES
+      - name: Build PDFs
+        uses: xu-cheng/texlive-action@v2
+        with:
+          texlive_version: 2022
+          run: |
+            for file in ${CHANGED_TEX_FILES}; do
+              echo "Building $file"   
+              make $(basename -s .tex $file).pdf
+            done
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
