@@ -31,7 +31,7 @@ jobs:
         run: |
           echo $CHANGED_TEX_FILES
           echo "#!/bin/bash" > entrypoint.sh
-          ENTRYPOINT = "make "
+          ENTRYPOINT="make "
           for file in ${CHANGED_TEX_FILES}; do
               echo "Building $file"   
               ENTRYPOINT+=" $(basename -s .tex $file).pdf"
