@@ -41,7 +41,7 @@ It's comfortable enough to move the stick while holding it with fingers and rest
     \label{fig:DecJoystickSize}
 \end{figure}
 
-The joystick buttons are connected in parallel and represent the same <<interrupt switch>>, which, depending on the situation, generates either a <<SWITCH>> interrupt (a signal of the button press to mark the desired position on the screen) or a <<CURSOR MATCH>> interrupt (selection of an object on the screen whose outline intersects with the cursor). In the last case the Display Processor stops executing the ``display file'' when the interrupt occurs, leaving the current position pointer to be read by software  \cite{vsv11}. This approach had originally appeared with vector displays and light pens and was later adapted for raster displays like the one of the VS11/VSV11 system.
+The joystick buttons are connected in parallel and represent the same ``interrupt switch'', which, depending on the situation, generates either a \verb|SWITCH| interrupt (a signal of the button press to mark the desired position on the screen) or a \verb|CURSOR MATCH| interrupt (selection of an object on the screen whose outline intersects with the cursor). In the last case the Display Processor stops executing the ``display file'' when the interrupt occurs, leaving the current position pointer to be read by software  \cite{vsv11}. This approach had originally appeared with vector displays and light pens and was later adapted for raster displays like the one of the VS11/VSV11 system.
 
 \begin{figure}[h]
     \centering
@@ -65,9 +65,7 @@ Disassembled joystick is shown in fig. \ref{fig:DecJoystickInside}.
     \label{fig:DecJoystickInside}
 \end{figure}
 
-Trim tabs mechanically rotate the $X$ and $Y$ potentiometers to control drift.
-The joystick assembly, including the stick and its mount, as well as potentiometers and coarse drift rotation tabs, is typical: it appears later unchanged up to complete interchangeability in a lot of analog joysticks produced for industrial needs.
-
+Trim tabs mechanically rotate the $X$ and $Y$ potentiometers to control drift. The joystick assembly, including the stick and its mount, as well as potentiometers and coarse drift rotation tabs, is typical: it appears later unchanged up to complete interchangeability in a lot of analog joysticks produced for industrial needs.
 
 \begin{thebibliography}{9}
 \bibitem {joystick} VSV11 RASTER GRAPHICS SYSTEM. D\textbar I\textbar G\textbar I\textbar T\textbar A\textbar L CSS -- Computer Special Systems \url{https://www.pdp-11.nl/peripherals/comm/interface/vsv11/vsv11-info.html}
