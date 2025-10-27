@@ -16,12 +16,21 @@
     \label{fig:NECCrystalPic}
 \end{figure}
 
-На верхней стороне корпуса выделено название мыши <<Crystal Mouse>> с двумя треугольными стилизованными мышками в очертаниях и сплошных линиях. Нижняя сторона показывает, что это оптическая мышь (рис. \ref{NecCrystalTopAndBottom}), во многом повторяющая внешние конструктивные решения мышей Mouse Systems того же периода и предназначенная для использования в комплекте со специальным зеркальным ковриком \cite{photo}.
+Как всем ранним оптическим мышам, данному манипулятору требуется отражающий свет коврик с нанесенной на него сеткой. В отличие от традиционных <<зеркальных>> ковриков Mouse Systems с решеткой из вертикальных и горизонтальных линий, соответствующих двум разным длинам волн, металлический коврик Nec Crystal Mouse имеет темную глянцевую поверхность (рис. \ref{fig:NecCrystalPad}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/nectop_60.jpg}
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/necbottom_60.jpg}
+    \includegraphics[scale=0.5]{1986_nec_crystal_mouse/necPad_30.jpg}
+    \caption{NEC Crystal Mouse на комплектном коврике}
+    \label{fig:NecCrystalPad}
+\end{figure}
+
+На верхней стороне корпуса выделено название мыши <<Crystal Mouse>> с двумя треугольными стилизованными мышками в очертаниях и сплошных линиях. Нижняя сторона показывает, что это оптическая мышь (рис. \ref{NecCrystalTopAndBottom}), во многом повторяющая внешние конструктивные решения мышей Mouse Systems того же периода \cite{photo}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/nectop_60.jpg}
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/necbottom_60.jpg}
     \caption{NEC Crystal Mouse, вид сверху и снизу}
     \label{NecCrystalTopAndBottom}
 \end{figure}
@@ -30,7 +39,7 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/NecKovrik_60.jpg}
+    \includegraphics[scale=0.45]{1986_nec_crystal_mouse/necSize_30.jpg}
     \caption{Изображение NEC Crystal Mouse на размерном коврике с шагом сетки 1~см}
     \label{fig:NecCrystalSize}
 \end{figure}
@@ -39,22 +48,24 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/NecRuka_30.jpg}
+    \includegraphics[scale=0.36]{1986_nec_crystal_mouse/necHand_30.jpg}
     \caption{NEC Crystal Mouse с моделью руки человека}
     \label{fig:NecCrystalHand}
 \end{figure}
 
-NEC Crystal Mouse имеет разъём DIN и по интерфейсу подключения относится к категории Bus Mouse (шинная мышь). Особенностью таких мышей является то, что обработку сигналов оптопар производит не микросхема в корпусе мыши, а специальный адаптер в системном блоке компьютера; поэтому данная мышь питается от компьютера без отдельного блока питания, в отличие от многих ранних оптических моделей, подключавшихся к последовательному порту IBM PC. 
+Внутреннее устройство манипулятора показано на рис. \ref{fig:NecCrystalInside}, где можно увидеть оригинальную конструкцию оптической мыши, отличающуюся от большинства оптических мышей 80-х годов, копировавших разработку компании Mouse Systems. Излучаемый светодиодами свет отражается от коврика, затем переотражается от зеркал внутри мыши (пара прямоугольных блоков с синей внешней стороной в центре конструкции), и наконец попадает на линейки фотоприемников, одна из которых расположена вдоль продольной оси, а другая --- вдоль поперечной. При этом у Nec Crystal Mouse светодиоды (а соответственно и зеркала) расположены под разными углами к поверхности коврика.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.8]{1986_nec_crystal_mouse/necraz_60.jpg}
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/necraz_60.jpg}
     \caption{NEC Crystal Mouse в разобранном виде}
     \label{fig:NecCrystalInside}
 \end{figure}
 
-В разобранном виде манипулятор показан на рис. \ref{fig:NecCrystalInside}, где можно увидеть оригинальную конструкцию оптической мыши, однако в отличие от большинства оптических мышей 80-х годов, не являющейся прямой копией изделия Mouse Systems, ставшей прототипом для последующих манипуляторов данного типа.
-    
+Коврик представляет собой металлическую пластину с полупрозрачным покрытием, скрывающим решетку. Продольные и поперечные линии решетки находятся на разной высоте, и их заметность зависит от того, под каким углом к поверхности расположена оптическая ось. Рисунок \ref{fig:NecCrystalPad} показывает Nec Crystal Mouse на коврике от более поздней мыши аналогичной конструкции, Kokuyo EAM-102; как можно судить по фотографии, приведенной в \cite{yt}, оригинальный коврик Nec был крупнее, и вероятно имел меньшее разрешение сетки.
+
+Также рисунок \ref{fig:NecCrystalInside} позволяет заключить, что мышь подключается к компьютеру по разновидности последовательного интерфейса (об этом свидетельствует ее кабель из четырех проводов, из которых, согласно маркировке на печатной плате, два отвечают за прием и передачу битов данных, а два обеспечивают питание).
+
 \begin{thebibliography}{9}
 \bibitem {yt} NEC EWS4800 \url{http://museum.ipsj.or.jp/en/computer/work/0003.html}
 \bibitem {photo} Graphics NEC EWS4800 \url{http://www.cs.ce.nihon-u.ac.jp/facility/exp-gazo.html}
