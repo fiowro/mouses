@@ -16,12 +16,21 @@ In September 1986, NEC Corporation announced the EWS 4800 UNIX workstation. This
     \label{fig:NECCrystalPic}
 \end{figure}
 
-The name of the mouse “Crystal Mouse” is highlighted on the upper side of the case with two triangular stylized mice in outlines and solid lines. The bottom side shows that this is an optical mouse (figure \ref{NecCrystalTopAndBottom}), which largely repeats the external design solutions of the Mouse Systems mice of the same period and is intended for use with a special mirror pad \cite{photo}.
+Like all early optical mice, this manipulator requires a reflective pad with a grid pattern. Unlike traditional Mouse Systems “mirror” pads with a grid of vertical and horizontal lines corresponding to two different wavelengths, the Nec Crystal Mouse's metal pad has a dark glossy surface (figure \ref{fig:NecCrystalPad}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{1986_nec_crystal_mouse/nectop_60.jpg}
-    \includegraphics[scale=0.5]{1986_nec_crystal_mouse/necbottom_60.jpg}
+    \includegraphics[scale=0.6]{1986_nec_crystal_mouse/necPad_30.jpg}
+    \caption{NEC Crystal Mouse on its pad}
+    \label{fig:NecCrystalPad}
+\end{figure}
+
+The name of the mouse “Crystal Mouse” is highlighted on the upper side of the case with two triangular stylized mice in outlines and solid lines. The bottom side shows that this is an optical mouse (figure \ref{NecCrystalTopAndBottom}), which largely repeats the external design solutions of the Mouse Systems mice of the same period \cite{photo}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/nectop_60.jpg}
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/necbottom_60.jpg}
     \caption{NEC Crystal Mouse, top and bottom views}
     \label{NecCrystalTopAndBottom}
 \end{figure}
@@ -30,30 +39,34 @@ In terms of size, the manipulator is an optical cursor control device typical fo
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/NecKovrik_60.jpg}
+    \includegraphics[scale=0.45]{1986_nec_crystal_mouse/necSize_30.jpg}
     \caption{NEC Crystal Mouse on a graduated pad with a grid step of 1~cm}
     \label{fig:NecCrystalSize}
 \end{figure}
 
 In terms of ergonomics, the exterior of the Crystal Mouse has a strong industrial design. At the same time, a large number of corners and flat edges are partly compensated by rounded joints of the edges in the part of the body closest to the user and convex long buttons conveniently located within the reach of the fingers (figure \ref{fig:NecCrystalHand}).
 
+~
+
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/NecRuka_30.jpg}
+    \includegraphics[scale=0.4]{1986_nec_crystal_mouse/necHand_30.jpg}
     \caption{NEC Crystal Mouse with a human hand model}
     \label{fig:NecCrystalHand}
 \end{figure}
 
-NEC Crystal Mouse has a DIN connector and belongs to the Bus Mouse category according to the connection interface. A feature of such mice is that the optocoupler signals are processed not by a chip in the mouse case, but by a special adapter in the computer system unit; therefore, this mouse is powered by the computer without a separate power supply, unlike many early optical models that were connected to the serial port of the IBM PC.
+The manipulator's internal structure is shown on figure \ref{fig:NecCrystalInside}, where you can see the unusual optical mouse design different from most optical mice of the 1980s, which copied the design of Mouse Systems. Light emitted by LEDs is reflected from the mouse pad, then re-reflected by mirrors inside the mouse (a pair of rectangular blocks with a blue outer surface in the center of the body), and finally reaches the lines of photodetectors, one located along the longitudinal axis and the other along the transverse axis. The LEDs (and, consequently, the mirrors) in Nec Crystal Mouse are positioned at different angles to the mouse pad's surface.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.8]{1986_nec_crystal_mouse/necraz_60.jpg}
+    \includegraphics[scale=0.75]{1986_nec_crystal_mouse/necraz_60.jpg}
     \caption{NEC Crystal Mouse disassembled}
     \label{fig:NecCrystalInside}
 \end{figure}
 
-Mouse internals are shown on figure \ref{fig:NecCrystalInside}. You can see the original design of this optical mouse. Unlike most optical mice of the 80s, it is not a direct copy of the Mouse Systems device, which has become a prototype for subsequent manipulators of this type.
+The mousepad is a metal plate with a translucent coating that conceals the grid. The longitudinal and transverse lines of the grid are at different heights, and their visibility depends on the angle of the optical axis relative to the surface. The figure \ref{fig:NecCrystalPad} shows the Nec Crystal Mouse on a mousepad from a later mouse of similar design, the Kokuyo EAM-102; as can be judged from the photograph in \cite{yt}, the original Nec mousepad was larger and likely had a lower grid resolution.
+
+Also, the figure \ref{fig:NecCrystalInside} allows us to conclude that the mouse is connected to the computer via some sort of a serial interface (this is evident from its four-wire cable, which, according to the markings on the printed circuit board, has two wires responsible for receiving and transmitting data bits, and two wires to provide power).
 
 \begin{thebibliography}{9}
 \bibitem {yt} NEC EWS4800 \url{http://museum.ipsj.or.jp/en/computer/work/0003.html}
