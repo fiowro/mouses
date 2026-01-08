@@ -1,0 +1,66 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{en}
+\begin{document}
+
+\title{1986 "--- TPX Mouse}
+\date{}
+\maketitle
+\selectlanguage{english}
+TPX Mouse (fig. \ref{fig:TPXPic}) is a cursor control device released by the Brazilian company Tropic Inform\'atica in 1986 for the TK90X computer (a Brazilian clone of the ZX Spectrum) and modified a year later for computers with the MSX architecture (a version with the MSX interface was sold by Input Digital under the name ``Input Mouse'') \cite{tpx, msxwiki}. The TK90X computer, for which the TPX mouse was originally intended, was a Brazilian clone of the ZX Spectrum, created in 1985 by Microdigital Electr\^onica: it was equipped with 16 or 48 KB of RAM, a processor with a clock rate of 3.58 MHz, and a 15-color video mode with a resolution of $256 \times 192$ pixels \cite{tk90x}.
+
+\begin{figure}[h]
+   \centering
+    \includegraphics[scale=0.8]{1986_tpx_mouse/pic_60.jpg}
+    \caption{TPX Mouse}
+    \label{fig:TPXPic}
+\end{figure}
+
+The top part of the TPX Mouse has a relatively complex shape by 1980s standards: its convex sides and a curved top merge into a strict rectangle where it meets the completely rectangular bottom part. The mouse has a sloping front side (the side farthest from the user), with two blue buttons on it (fig. \ref{fig:TPXTopAndBottom}). The top of the case reproduces the shape of the first Microsoft mouse, released in 1983 and known as the ``Green-Eyed Mouse'' for its green buttons. But it replicates the green-eyed mouse only to the extent possible given the rectangular bottom of the case. The bottom part, in its turn, down to the smallest detail, matches the bottom of the Torrington Manager Mouse from 1985. Like with the Torrington mouse, on the bottom one can find a sticker with some technical information, and two small cone-shaped wheels used to register movements instead of the ball which would be typical for mechanical mice. This unusual design comes back to Douglas Engelbart’s first mice: the wheels are positioned orthogonally to each other, so that one always rotates while the other always slides during the longitudinal and lateral movements.  However, compared to Engelbart’s mouse, the Manager Mouse’s wheels are significantly smaller, and their axes are positioned at an angle to the horizontal plane, which should improve the registration of diagonal movements. Like the Manager Mouse, the TPX Mouse's cable does not have a protection from mechanical damage at the point where it exits the case.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.84]{1986_tpx_mouse/top_60.jpg}
+    \includegraphics[scale=0.84]{1986_tpx_mouse/bottom_60_30.jpg}
+    \caption{TPX Mouse, top and bottom views}
+    \label{fig:TPXTopAndBottom}
+\end{figure}
+
+The mouse's dimensions are average by 1980s standards (fig. \ref{fig:TPXSize}) -- primarily due to the size of the base, borrowed from the Torrington mouse, and also, in part, to the shape of the Microsoft mouse. However, thanks to the absence of a steel ball and a smaller motion detection unit, the TPX Mouse is significantly lighter and also stockier than the green-eyed mouse -- only slightly taller than the Torrington's mouse.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{1986_tpx_mouse/size_30.jpg}
+    \caption{TPX Mouse on a graduated pad with a grid step of 1~cm}
+    \label{fig:TPXSize}
+\end{figure}
+
+The shape of the top and the placement of the buttons on the slanted edge, designed to provide a comfortable palm position on the mouse body, give the TPX Mouse a distinct ergonomic advantage over other Spectrum-compatible mice (fig. \ref{fig:TPXHand}). However, the buttons are quite awkward to use due to their long travel and lack of a click. Another design drawback is the increased risk of accidentally sliding the mouse backward when pressing the buttons (with the Microsoft Mouse, this effect is lessened due to the mouse's heavy weight).
+
+The internal structure of the mouse can be seen in fig. \ref{fig:TPXInside}. As it could be clearly seen, it is a pure mechanical design, and the mechanical encoder disks are mounted directly on the wheel axles. The internal layout of the case, the shape of the printed circuit boards, the motion registration unit and the axis locking plate are completely identical to the Torrington mouse - right down to the use of fairly expensive bearings as bushings pressed by the plate to hold the axes at the desired angles \cite {retrofit}. This last component contrasts with the cheapness and low reliability of the other design elements, but is explained by the fact that the Torrington company at that time was a large international manufacturer of bearings.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.62]{1986_tpx_mouse/hand_30.jpg}
+    \caption{TPX Mouse with a human hand model}
+    \label{fig:TPXHand}
+\end{figure}
+
+Additionally, this can be considered convincing evidence that the TPX Mouse uses a ready-made Torrignton unit.
+However, the electronic components have little in common with the Manager Mouse, and most of them have been relocated to the mouse connector plug. This solution is quite typical for connecting mice to ZX Spectrum and Spectrum-compatible computers: due to the lack of a specialized interface, quadrature mice were connected to a fairly large system bus connector and additionally equipped with a parallel interface controller, which provided interrupt-level communication with the CPU \cite{pio}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{1986_tpx_mouse/inside_60.jpg}
+    \caption{TPX Mouse disassembled}
+    \label{fig:TPXInside}
+\end{figure}
+
+\begin{thebibliography}{9}
+    \bibitem {msxwiki} TPX Mouse -- MSX Wiki \url{https://www.msx.org/wiki/TPX_Mouse}
+    \bibitem {tpx} Mouse TPX para MSX -- Tabajara Labs [in Portugal] \url{https://web.archive.org/web/20180510093756/https://www.tabalabs.com.br/msx/mouse_tpx/index.htm}
+    \bibitem {tk90x} TK980 -- Wikipedia \url{https://en.wikipedia.org/wiki/TK80}
+    \bibitem {retrofit} Sturaro L. Mouse TPX, fazendo um retrofit -- The MSX Hardware Page [in Portugal] \url{https://www.msxpro.com/tpx_retrofit.html}
+    \bibitem {pio} Z8420 datasheet -- Zilog, Inc. \url{https://www.alldatasheet.com/html-pdf/78374/ZILOG/Z8420/124/1/Z8420.html}
+\end{thebibliography}
+\end{document}
