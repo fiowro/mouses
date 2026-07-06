@@ -1,0 +1,71 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{ru}
+\begin{document}
+
+\title{1980 "--- A2D Joystick для Apple II, 1-е поколение}
+\date{}
+\maketitle
+\selectlanguage{russian}
+
+Джойстик A2D Joystick (рис. \ref{fig:A2DJoystick1stGenPic}), аналоговый джойстик первого поколения от компании A2D для компьютеров Apple II, был изначально разработан в конце 1970-х годов и связан с именем Джефа Раскина "--- известного инженера и исследователя интерфейсов, сыгравшего ключевую роль в создании Apple Macintosh.
+
+\begin{figure}[h]
+   \centering
+    \includegraphics[width=\textwidth]{1980_a2d_joystick_1st_gen/pic_30.jpg}
+    \caption{A2D Joystick}
+    \label{fig:A2DJoystick1stGenPic}
+\end{figure}
+
+Внешний вид и внутренние компоненты джойстика были позаимствованы у пультов дистанционного управления радиоуправляемых моделей самолетов. По их образцу устройство заключено в «тяжелый алюминиевый корпус, покрытый золотистым винилом (не вакуумно-формованный)» \cite{joystick81}. Как видно на рис. \ref{fig:A2DJoystick1stGenTopAndBottom}, <<тяжелый алюминиевый корпус>> имеет прямоугольную форму, а его нижняя сторона корпуса "--- абсолютно плоская, лишена каких-либо элементов, в том числе ножек. На верхней стороне можно видеть табличку с логотипом фирмы-производителя, а также стик аналогового джойстика (триммеры, предназначенные для механической регулировки центрального положения стика, не предусмотрены). На одном торце расположены две врезные тактовые кнопки красного цвета. На другом торце присутствуют поворотные регуляторы потенциометров, позволяющих выставить нулевое напряжение для каждой из осей (рис. \ref{fig:A2DJoystick1stGenSize}). 
+
+Как внешне так и внутренне джойстик воспроизводит экземпляр самого первого джойстика для Apple II, созданный Джеффом Раскиным \cite{raskin}, исходя из чего устройство A2D можно считать его серийной адаптацией. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1980_a2d_joystick_1st_gen/top_30.jpg}
+    \includegraphics[scale=0.5]{1980_a2d_joystick_1st_gen/bottom_30.jpg}
+    \caption{A2D Joystick, вид сверху и снизу}
+    \label{fig:A2DJoystick1stGenTopAndBottom}
+\end{figure}
+
+Единственное отличие, которое можно заметить, касается поворотных регуляторов: у прототипа Раскина они меньше по размеру и врезаны в случайных местах на верхней крышке, а в образце компании A2D "--- разумно помещены на торце корпуса. Учитывая дату первого известного упоминания в литературе \cite{joystick80} и упоминание в \cite{joystick81} того факта, что «в течение 1 года было реализовано около 500 экземпляров», появление устройства на рынке можно датировать 1980 годом.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1980_a2d_joystick_1st_gen/size_30.jpg}
+    \caption{A2D Joystick на размерном коврике с шагом сетки 1~см}
+    \label{fig:A2DJoystick1stGenSize}
+\end{figure}
+
+Узел джойстика, включая весь электромеханический блок, также был заимствован из пультов дистанционного управления радиоуправляемых моделей. В литературе эту связь подчеркивает упоминание «прецизионного самоцентрирующегося стика с открытым карданным подвесом» \cite{joystick80}, который был «разработан для использования в радиоуправлении» \cite{joustickAD} и «обеспечивает более легкое ощущение и более точное движение» \cite{info_3}. В действительности, стиком довольно удобно управлять пальцами, в то время как ладонь опирается на корпус (рис. \ref{fig:A2DJoystick1stGenHand}). Этого нельзя сказать о миниатюрных кнопках, не имеющих четкой тактильной идентификации срабатывания, которые Джеф Раскин, еще не будучи мировым авторитетом в мире графических интерфейсов, опрометчиво позаимствовал у тех же самых пультов управления. В случае управления моделью самолёта кнопки не предполагают большой нагрузки, однако в совершенно противоположной ситуации находится компьютерный джойстик, в рекламе которого упоминается «приятный портативный дизайн с двумя кнопками управления играми» \cite{joystick81}. Сколько-нибудь длительное использование этих миниатюрных кнопок с компьютерными играми или другим типовым программным обеспечением несомненно создает большой дискомфорт. Очевидно, этот недостаток был достаточно быстро замечен производителем и исправлен в следующей модели "--- A2D Joystick 2001, которая получила пластиковый корпус со скругленными углами и вогнутыми клавишами с характерным щелчком.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1980_a2d_joystick_1st_gen/hand_30.jpg}
+    \caption{A2D Joystick с моделью руки человека}
+    \label{fig:A2DJoystick1stGenHand}
+\end{figure}
+
+Конструкция узла джойстика является достаточно стандартной, основанной на аналоговых потенциометрах, преобразующих отклонение рукоятки в изменение электрического сопротивления (рис. \ref{fig:A2DJoystick1stGenInside}). Как и пультов управления радиомоделями, стики A2D Joystick действительно размещены на активно рекламировавшихся производителем металлических карданных подвесах (gimbal).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1980_a2d_joystick_1st_gen/inside_30.jpg}
+    \caption{A2D Joystick в разобранном виде}
+    \label{fig:A2DJoystick1stGenInside}
+\end{figure}
+
+\begin{thebibliography}{9}
+
+\bibitem{joystick81} Van Diver G., Love R. Apple II/III software directory. Vital Information, Inc., 1981. p. PR-21 \url{https://archive.org/details/vanlovesappleiii00gera/page/470/mode/1up?q=a2d+joystick}
+
+\bibitem{raskin} Jef Raskin's Apple II Joystick // DigiBarn Devices: Jef Raskin's Apple II Joystick \url{https://www.digibarn.com/collections/devices/raskin-joystick/index.html"}
+
+\bibitem{joystick80}Frederick F.J. Guide to microcomputers / Association for Educattional Communications and Technology. AECT-ERIC/Information Resources, Syracuse University, 1980. p. 37 \url{https://archive.org/details/guidetomicrocomp0000fred/page/37/mode/1up?q=a2d}
+
+\bibitem {joustickAD} A2D Joystick 2001 (advertising) // Creative Computing, Vol.8, No 12, December 1982 -- p. 238 {https://archive.org/details/CreativeComputing1982-12/page/n231/mode/2up}
+
+\bibitem {info_3} A2D Joystick Model 2001 // Creative Computing, Vol.8, No 8, August 1982 -- p. 79. \url{https://archive.org/details/creative-computing-august-1982/page/76/mode/2up?q="a2d+joystick"} % 82
+
+\end{thebibliography}
+\end{document}
