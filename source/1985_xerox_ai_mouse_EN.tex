@@ -1,0 +1,114 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{en}
+\begin{document}
+
+\title{1985 -- Xerox 1186 Workstation AI Mouse}
+\date{}
+\maketitle
+\selectlanguage{english}
+
+In March 1973, Xerox Corporation announced the Xerox Alto computer, considered the first workstation (or personal computer), as well as the first computer with a graphical user interface \cite{wiki}. The workstation also came with the first mass-produced mouse in the history of computers, the Xerox Alto Mouse (fig. \ref{fig:XeroxAIPic}). The original mouse based on two wheels was in several years upgraded and started to use a ball. But still, those mice weren't too reliable according to the quotes given in \cite{mouses}: they picked up dirt, quickly became gummed, and no longer controlled the cursor. Alto user had to unplug the mouse when that happened, put it into the ``Dead Mice''  box, and grab a cleaned mouse from the ``Clean Mice'' box. And the price of such a mouse was more than \$400.
+
+The work for a completely optical mouse has been started near 1980 to solve two problems: to get higher reliability (because of no moving parts except the button switches), and much cheaper price (due to the one-chip design). The result of this effort was the last generation of the Alto mice -- Xerox AI mouse, brought into life in 1981 \cite{vlsi81}. The mouse proved to be very successful compared to its mechanical predecessor, so its design was soon adopted for Xerox Star computers and later even for some of the company's copiers \cite{mouses}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{1985_xerox_ai_mouse/pic_30.jpg}
+    \caption{Xerox AI Mouse}
+    \label{fig:XeroxAIPic}
+\end{figure}
+
+\section*{Exterior}
+
+The Xerox AI mouse is housed in the same case as its mechanical version \cite{vlsi82}, and has the same color scheme. The case, made of (originally) cream-colored plastic, glossy in this mouse revision, is an almost perfect parallelepiped: it widens slightly toward the bottom and has convex sides to reduce the association with a ``box''. On the upper side of the case are three large, oblong, rounded buttons that meet at the edges, visually forming one solid block (Fig. \ref{XeroxAITopAndBottom}). Xerox software documentation called these buttons ``red'', ``yellow'', and ``blue''. However, in all cases (except for the earliest mouse modification with wheels and transversely oriented buttons \cite{vlsi81}), all three buttons were made of black (later, dark gray) plastic. It is likely that the myth that using one- and two-button mice was easier compared to a three-button one comes out of the confusion this unfortunate color coding caused among users.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/top_30.jpg}
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/bottom_30.jpg}
+    \caption{Xerox AI Mouse, top and bottom views}
+    \label{XeroxAITopAndBottom}
+\end{figure}
+
+A $4 \times 4$ size scanning elements matrix is responsible for reading color inhomogeneities at move, so the mouse required either a pad with a specially designed pattern or any surface with similar alternating light and dark spots, such as denim. The Xerox AI mouse pad was a paper, sold in packs of 25 sheets \cite{pad}. The pattern was an array of light hexagons on a dark field and was easily reproduced by photocopying. A reconstructed pad can be seen in fig. \ref{fig:XeroxAIPad}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{1985_xerox_ai_mouse/pad_30.jpg}
+    \caption{Xerox AI Mouse on a reconstructed pad}
+    \label{fig:XeroxAIPad}
+\end{figure}
+
+\section*{Size}
+
+The mouse could have been smaller and lower in size if it had not used the standard Alto mouse body. As it is, it has the typical dimensions for mechanical mice of the first half of the 80s (figure \ref{fig:XeroxAISize}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/size_15.jpg}
+    \caption{Xerox AI Mouse on a graduated pad with a grid step of 1~cm}
+    \label{fig:XeroxAISize}
+\end{figure}
+
+\section*{Ergonomics}
+
+In terms of ergonomics and appearance, the Alto Mouse is minimalist. The user experience certainly suffers from the severe ``rectangularity'' of the case. Although this is partly compensated for by the convex oblong buttons, located within the reach of the fingers, the case doesn't provide much palm support (figure \ref{fig:XeroxAIHand}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/hand_30.jpg}
+    \caption{Xerox AI Mouse with a human hand model}
+    \label{fig:XeroxAIHand}
+\end{figure}
+
+\section*{Connectivity}
+
+The mouse has connector typical for Xerox Alto (DA-15 in this version), and the same quadrature interface as other Xerox mice.
+
+\section*{Internal design}
+
+Mouse internals are shown in figure \ref{fig:XeroxAIInside}, where you can see the plastic cover which protects the scanning matrix from possible exposure to light (in later versions of mice for the Xerox Star, this cover was removed), as well as the signal processing chip. The printed circuit board is raised above the base, and angle-directed LEDs placed under are illuminating the mouse pad.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{1985_xerox_ai_mouse/inside_30.jpg}
+    \caption{Xerox AI Mouse disassembled}
+    \label{fig:XeroxAIInside}
+\end{figure}
+
+\begin{thebibliography}{9}
+\bibitem {wiki} Xerox Alto: Wikipedia \url{https://en.wikipedia.org/wiki/Xerox_Alto}
+\bibitem {vlsi81} R.\,F. Lyon. The Optical Mouse, and an Architectural Methodology for
+Smart Digital Sensors // VLSI DESIGN, August 1981. - p. 20--30. \url{https://www.dicklyon.com/tech/OMouse/OpticalMouse-Lyon.pdf}
+\bibitem {vlsi82} R.\,F. Lyon, M.\,P. Haeberli. Designing and Testing The Optical Mouse // VLSI DESIGN, January/February, 1982. - p. 20--30. \url{https://www.dicklyon.com/tech/OMouse/DesigningTestingOMouse.pdf}
+\bibitem{pad} R.\,F. Lyon The Optical Mouse: Early Biomimetic Embedded Vision / Advances in Embedded Computer Vision, Nov 2014, pp.3-22 \url{https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/43260.pdf}
+\bibitem{mouses} Xerox Mice. oldmouse.com \url{https://web.archive.org/web/20210418000634/http://oldmouse.com/mouse/xerox/alto.shtml}
+
+\bibitem{ineterlisp-timeline} Iterlisp Timeline. The Medley Interlisp Project \url{https://interlisp.org/history/timeline/}
+
+1985
+Harmony and Intermezzo releases
+Koto release (for Xerox 1186), some bits of Common Lisp
+
+\bibitem{ineterlisp-about} History. The Medley Interlisp Project \url{https://interlisp.org/history/}
+
+When sold as a workstation of the Xerox Office Systems Division, the machines had different numbers – the Xerox 1108 (Dandelion) was the same as the Xerox 8010. The Xerox 1186 (Daybreak) was the same as the Xerox 6085.
+
+\bibitem{aimouse} Xerox 6085 PCS Service Manual. October 1988 {https://www.bitsavers.org/pdf/xerox/6085/service/700P05710_6085_PCS_Service_Manual_Oct88.pdf} P. 125
+
+Optical Mouse 800 800
+AI Mouse (three-button) 
+
+p. 132 mouse (18K00190) 
+
+p. 133 Mouse: the optical mouse, two optical mouse pads, and one mechanical mouse pad. 
+
+p. 177 pinout
+
+
+\end{thebibliography}
+\end{document}
+
+
+

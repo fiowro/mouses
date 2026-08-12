@@ -1,0 +1,91 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{ru}
+\begin{document}
+
+\title{1985 "--- Xerox 1186 Workstation AI Mouse}
+\date{}
+\maketitle
+\selectlanguage{russian}
+
+В марте 1973 года корпорация Xerox анонсировала компьютер Xerox Alto, считающийся первой рабочей станцией (или персональным компьютером), а также первым компьютером, оснащенным графическим интерфейсом пользователя \cite{wiki}. В комплекте с этой рабочей станцией поставлялась и первая в истории компьютеров серийная мышь, Xerox Alto Mouse (рис. \ref{fig:XeroxAIPic}). Первоначальный вариант мыши на основе двух колес был через несколько лет модернизирован, и вместо колес стал использоваться шар. Но все равно эти мыши были не слишком надежными: судя по цитатам, приведенным в \cite{mouses}, они собирали грязь, быстро засорялись и переставали управлять курсором. Когда это случалось, пользователь Alto должен был отключить мышь, положить ее в коробку «Мертвые мыши» и взять прошедшую чистку мышь из коробки «Чистые мыши». При этом цена мыши составляла более 400 долларов.
+
+Работа над оптической мышью была начата в районе 1980 года для решения двух задач: улучшить надежность (за счёт отсутствия других подвижных частей, кроме кнопок) и существенно понизить цену (за счёт интегрированного решения в виде единственной микросхемы). Результатом этих усилий стало последнее поколение мышей Alto "--- Xerox AI mouse, представленное в 1981 году \cite{vlsi81}. Мышь оказалась очень удачной по сравнению со своими механическими предшественниками, поэтому ее конструкцию сразу же адаптировали для компьютеров Xerox Star, а позднее и для некоторых копировальных аппаратов компании \cite{mouses}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{1985_xerox_ai_mouse/pic_30.jpg}
+    \caption{Xerox AI Mouse}
+    \label{fig:XeroxAIPic}
+\end{figure}
+
+\section*{Внешний вид}
+
+Оптическая мышь Xerox Alto выполнена в том же корпусе, что и ее механическая версия \cite{vlsi82}, и имеет ту же цветовую схему. Корпус из кремового (исходно) пластика, в данной ревизии мыши глянцевого, представляет собой почти правильный паралеллепипед: слегка расширяется книзу и имеет выпуклые грани, чтобы уменьшить ассоциации с <<коробкой>>. В отличие от металлической нижней части механической мыши Alto, y оптического варианта низ выполнен из черного пластика, под цвет кабеля и разъема. На верхней стороне корпуса находятся три вытянутые закругленные кнопки, которые смыкаются краями, образуя визуально один цельный блок (рис. \ref{XeroxAITopAndBottom}).  В документации программного обеспечения Xerox кнопки мыши были обозначены как <<красная>>, <<желтая>> и <<синяя>>. Однако во всех случаях (кроме самой ранней модификации мыши с колёсами и поперечно расположенными кнопками \cite{vlsi81}), все три  изготавливались из черного (позднее, темно-серого) пластика. Вероятно, путаница, возникавшая у пользователей из-за такого неудачного цветокодирования, и поспособствоала мифу о преимуществе однокнопочных и двухкнопочных мышей перед мышами с тремя кнопками.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/top_30.jpg}
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/bottom_30.jpg}
+    \caption{Xerox AI Mouse, вид сверху и снизу}
+    \label{XeroxAITopAndBottom}
+\end{figure}
+
+За регистрацию смещения цветовых неоднородностей при движении мыши отвечает сканирующая матрица размером $4 \times 4$ элемента, поэтому мыши требовался либо коврик со специально разработанным рисунком, либо поверхность с похожим чередованием мелких светлых и темных пятен, например, джинсовая ткань. Коврик для оптической мыши Xerox Alto был бумажным и продавался в пачках по 25 листов \cite{pad}. Узор представлял собой массив светлых шестиугольников на темном поле и был легко воспроизводим ксерокопированием. Реконструированный коврик можно увидеть на рис. \ref{fig:XeroxAIPad}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{1985_xerox_ai_mouse/pad_30.jpg}
+    \caption{Xerox AI Mouse на реконструкции комплектного коврика}
+    \label{fig:XeroxAIPad}
+\end{figure}
+
+\section*{Размеры}
+
+По размеру мышь могла бы быть меньше и ниже, если бы не использовала стандартный корпус мышей Alto. А так она получила типичные габариты для механических мышей  первой половины 80-х годов.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/size_15.jpg}
+    \caption{Xerox AI Mouse на размерном коврике с шагом сетки 1~см}
+    \label{fig:XeroxAISize}
+\end{figure}
+
+\section*{Эргономика}
+
+В плане эргономики и во внешнем виде Alto Mouse прослеживается минимализм. Пользовательский опыт несомненно страдает от суровой <<прямоугольности>> корпуса: её отчасти компенсируют выпуклые продолговатые кнопки, расположенные в зоне досягаемости пальцев, однако корпус не может обеспечить существенной поддержки ладони (рис. \ref{fig:XeroxAIHand}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.45]{1985_xerox_ai_mouse/hand_30.jpg}
+    \caption{Xerox AI Mouse с моделью руки человека}
+    \label{fig:XeroxAIHand}
+\end{figure}
+
+\section*{Подключение}
+
+Мышь имеет типичный для Xerox Alto разъем (в данном варианте "--- DA-15) и тот же квадратурный интерфейс, что и другие мыши Xerox. 
+
+\section*{Внутреннее устройство}
+
+В разобранном виде манипулятор показан на рис. \ref{fig:XeroxAIInside}, где можно увидеть пластиковый блок, зарывающий сканирующую матрицу от возможной засветки (в более поздних вариантах мышей для Xerox Star от него отказались), а также микросхему, отвечающую за обработку сигналов и выдачу квадратуры. Печатная плата поднята над основанием корпуса на вертикальных стойках, а под ней расположены под углом светодиоды для подсвечивания коврика мыши.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.9]{1985_xerox_ai_mouse/inside_30.jpg}
+    \caption{Xerox AI Mouse в разобранном виде}
+    \label{fig:XeroxAIInside}
+\end{figure}
+
+\begin{thebibliography}{9}
+\bibitem {wiki} Xerox Alto: Wikipedia \url{https://en.wikipedia.org/wiki/Xerox_Alto}
+\bibitem {vlsi81} R.\,F. Lyon. The Optical Mouse, and an Architectural Methodology for
+Smart Digital Sensors // VLSI DESIGN, August 1981. - p. 20--30. \url{https://www.dicklyon.com/tech/OMouse/OpticalMouse-Lyon.pdf}
+\bibitem {vlsi82} R.\,F. Lyon, M.\,P. Haeberli. Designing and Testing The Optical Mouse // VLSI DESIGN, January/February, 1982. - p. 20--30. \url{https://www.dicklyon.com/tech/OMouse/DesigningTestingOMouse.pdf}
+\bibitem{pad} R.\,F. Lyon The Optical Mouse: Early Biomimetic Embedded Vision / Advances in Embedded Computer Vision, Nov 2014, pp.3-22 \url{https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/43260.pdf}
+\bibitem{mouses} Xerox Mice. oldmouse.com \url{https://web.archive.org/web/20210418000634/http://oldmouse.com/mouse/xerox/alto.shtml}
+
+\bibitem{decromnaner} von Hagen B. Mice I Have Known. XEROX 6085 Optical Mouse ~1983 \url{https://archive.decromancer.ca/vonhagen.org/mice.html}
+
+\end{thebibliography}
+\end{document}
