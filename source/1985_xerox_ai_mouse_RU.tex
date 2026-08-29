@@ -1,0 +1,95 @@
+\documentclass[11pt, a4paper]{article}
+\input{preamble.tex}
+\switchlang{ru}
+\begin{document}
+
+\title{1985 "--- Xerox AI Mouse}
+\date{}
+\maketitle
+\selectlanguage{russian}
+
+В 1985 году компания Xerox выпустила последний компьютер из серии так называемых D-машин — Daybreak (после предыдущих поколений, названных Dorado, Dolphin и Dandelion). Рабочие станции были представлены отдельно как офисные и научные компьютеры. Это была уже сложившаяся традиция, поскольку, наряду с разработкой первых офисных компьютерных систем с графическим интерфейсом и управлением мышью (Xerox Star), компания активно экспериментировала с графической средой разработки, результатом чего стали первая в истории оконная оболочка для IDE Smalltalk, а также среда разработки Interlisp для исследований в области искусственного интеллекта и других исследовательских проектов. Эти системы для разработчиков использовали ту же аппаратную часть, что и Xerox Star, но значились под другими номерами: в частности, машины Daybreak назывались «6085 Professional Computer System worstation», когда продавались как офисные системы, и «Xerox 1186 workstation», будучи сконфигурированы в качестве Lisp-машин \cite {daybreak, ineterlisp-about, computerworld}. Вариант 1186 был предназначен для поддержки исследований в области программного обеспечения для искусственного интеллекта, вычислительной лингвистики, графических пользовательских интерфейсов, гипертекста, а также для использования в других исследовательских областях. И специально для этих компьютеров компания Xerox разработала новую мышь (рис. \ref{fig:XeroxAIPic}), фигурирующую в документации под названием «ИИ-мышь (трехкнопочная)» (англ. «AI mouse (three-button)») \cite{aimouse}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{1985_xerox_ai_mouse/pic_30.jpg}
+    \caption{Xerox AI Mouse}
+    \label{fig:XeroxAIPic}
+\end{figure}
+
+Необходимость в специальной мыши объясняется тривиально: система Interlisp использовала графический интерфейс, управляемый тремя кнопками мыши. Помимо прочих функций, средняя кнопка использовалась для вызова всплывающих меню объектов, в том числе для манипулирования объектами Lisp в среде разработки Interlisp\cite{loops}, поэтому наличие физической третьей кнопки на мыши считалось важным. Но, начиная с вывода на рынок Xerox Star Information System в 1981 году, компания сократила количество кнопок мыши до двух, и поэтому до 1985 года Lisp-машины Xerox приходилось оснащать сторонними трехкнопочными мышами: мышью Xerox Alto, мышью Hawley Mouse House X063X Mark II, или даже оптической мышью Mouse Systems \cite{star, daybreak}. В 1985 году Xerox наконец-то устранила этот пробел.
+
+\section*{Внешний вид}
+
+Xerox AI Mouse выполнена в том же корпусе, что и ее двухкнопочная версия для Xerox Daybreak \cite{vlsi82}, не сильно отличается от исходной оптической мыши Xerox Star.  Верхняя часть, выполненная из бежевого пластика, в определенной степени образована от параллелепипеда и по форме идентична мыши Xerox Star: она расширяется книзу, ее передняя и задняя стороны выпуклые и заметно наклонены, а вертикальные ребра закруглены, что существенно уменьшает ассоциацию с «коробкой» (рис. \ref{XeroxDaybreakTopAndBottom}). На верхней стороне корпуса расположены три большие продолговатые кнопки из более темного пластика, которые смыкаются краями, образуя визуально единый блок (рис. \ref{XeroxAITopAndBottom}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/top_15.jpg}
+    \includegraphics[scale=0.5]{1985_xerox_ai_mouse/bottom_15.jpg}
+    \caption{Xerox AI Mouse, вид сверху и снизу}
+    \label{fig:XeroxAITopAndBottom}
+\end{figure}
+
+Нижняя часть мыши черная, на ней можно увидеть 3 пластиковые ножки, напечатанный номер модели мыши, а также выемку с линзами для светодиодов и матрицы оптических датчиков. Кабель мыши и корпус разъема выполнены в цвете кнопок. Для кабеля не предумотрена механическая защита в месте выхода из корпуса мыши.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/pad_30.jpg}
+    \caption{Xerox AI Mouse на реконструкции комплектного коврика}
+    \label{fig:XeroxAIPad}
+\end{figure}
+
+За регистрацию смещения цветовых неоднородностей при движении мыши отвечает сканирующая матрица размером $4 \times 4$ элемента, поэтому мыши требовался либо коврик со специально разработанным рисунком (массив светлых шестиугольников на темном поле), либо поверхность с похожим чередованием мелких светлых и темных пятен, например, джинсовая ткань. Коврик легко воспроизводим ксерокопированием, и более того, оригинальный коврик опической мыши Star был бумажным и продавался в пачках по 25 листов \cite{pad}. Реконструированный коврик можно увидеть на рис. \ref{fig:XeroxAIPad}.
+
+\section*{Размеры}
+
+По размеру мышь могла бы быть меньше и ниже, если бы не использовала стандартный корпус мышей Xerox Star, разработанный с учетом обеспечения одинакового внешнего вида для механических и оптических мышей. Тем не менее, по меркам 1980-х годов мышь Xerox Star можно назвать скорее компактной, чем средних размеров, а визуально она выглядит еще меньшей (рис. \ref{fig:XeroxAISize}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/size_15.jpg}
+    \caption{Xerox AI Mouse на размерном коврике с шагом сетки 1~см}
+    \label{fig:XeroxAISize}
+\end{figure}
+
+\section*{Эргономика}
+
+С точки зрения эргономики и внешнего вида, мышь выполнена в минималистичном стиле. Удобство использования мышей Xerox Star (включая Xerox AI Mouse), безусловно, меньше страдает от «прямоугольной» формы корпуса, чем это было с мышью Alto. Выпуклые продолговатые кнопки, расположенные в пределах досягаемости пальцев, по-прежнему удобны, а наклон ближней к пользователю стороны корпуса даже обеспечивает некоторый комфорт для ладони (рис. \ref{fig:XeroxAIHand}) "--- по крайней мере, больше, чем у многих мышей 1980-х годов (конечно, более низкий корпус сделал бы мышь еще удобнее). Кроме того, небольшая ширина корпуса и его заметная высота, учитывая небольшой вес устройства, позволяет переносить мышь на другую часть коврика, удерживая ее с боков пальцами. Это могло бы быть полезным при кратковременном застревании механического блока из-за мусора "--- но в данном случае не особенно необходимо, учитывая, что мышь оптическая, а лист бумаги формата А4 представляет собой по-настоящему большой коврик.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{1985_xerox_ai_mouse/hand_30.jpg}
+    \caption{Xerox AI Mouse с моделью руки человека}
+    \label{fig:XeroxAIHand}
+\end{figure}
+
+\section*{Подключение}
+
+Как и все мыши Xerox, мышь Daybreak имеет квадратурный интерфейс \cite[p.~177]{aimouse}. Мышь подключается к компьютеру Daybreak через клавиатуру, которая имеет для этого специальный разъем на задней панели. Но, в отличие от предыдущих поколений компьютеров Xerox, вместо 15- или 9-контактного разъема D-SUB здесь используется фирменный миниатюрный штеккер нестандартного вида (рис. \ref{fig:XeroxAIPic}). Однако гнездо на печатной плате клавиатуры показывает, что разница скорее косметическая, чем функциональная: технически это все еще 9-контактный разъем с шахматным порядком контактов, таким же, как у D-SUB \cite{jack, converter}.
+
+\section*{Внутреннее устройство}
+
+В разобранном виде манипулятор показан на рис. \ref{fig:XeroxAIInside}, где можно увидеть специализированный чип в прозрачном пластиковом корпусе, изготовленном методом литья под давлением \cite{vlsi82}, который содержит матрицу сканирования, а также выполняет некоторую начальную обработку сигнала. Печатная плата поднята над основанием корпуса на вертикальных стойках, а под ней расположены под углом светодиоды для подсвечивания коврика мыши.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1]{1985_xerox_ai_mouse/inside_30.jpg}
+    \caption{Xerox AI Mouse в разобранном виде}
+    \label{fig:XeroxAIInside}
+\end{figure}
+
+\begin{thebibliography}{9}
+\bibitem{daybreak} Xerox Daybreak: Wikipedia \url{https://en.wikipedia.org/wiki/Xerox_Daybreak}
+\bibitem{ineterlisp-about} History. The Medley Interlisp Project \url{https://interlisp.org/history/}
+\bibitem{computerworld} Lisp-based financial planning system out // COMPUTERWORLD, Vol. 19, Iss. 40, October 7, 1985. -- P. 38 \url{https://archive.org/details/computerworld1940unse_0/page/n40/mode/2up}
+\bibitem{aimouse} Xerox 6085 PCS Service Manual. October 1988 \url{https://www.bitsavers.org/pdf/xerox/6085/service/700P05710_6085_PCS_Service_Manual_Oct88.pdf} P. 125
+\bibitem{loops} Bobrow D.G., Stefik M. The LOOPS Manual. -- Xerox Corporation, December, 1983. -- 124 p. \url{https://xeroxparcarchive.computerhistory.org/indigo/loops/doc/manual/.CHAPLOOPS.PRESS!2.pdf}
+\bibitem {star} Xerox Star: Wikipedia \url{https://en.wikipedia.org/wiki/Xerox_Star}
+\bibitem {photo} Alves P. Xerox 6085 workstation from 1985. Retro Microcomputers, Workstations, Servers and Consoles - Welcome! November 27, 2018. \url{https://www.facebook.com/groups/retrocomputers/posts/2333452826684585/}
+\bibitem{pad} R.\,F. Lyon The Optical Mouse: Early Biomimetic Embedded Vision / Advances in Embedded Computer Vision, Nov 2014, pp.3-22 \url{https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/43260.pdf}
+\bibitem {converter} Xerox Daybreak Mouse Converter \url{https://github.com/fiowro/XeroxDaybreakMouseConverter/}
+\bibitem {vlsi82} R.\,F. Lyon, M.\,P. Haeberli. Designing and Testing The Optical Mouse // VLSI DESIGN, January/February, 1982. - p. 20--30. \url{https://www.dicklyon.com/tech/OMouse/DesigningTestingOMouse.pdf}
+\end{thebibliography}
+\end{document}
